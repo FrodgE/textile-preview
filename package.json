@@ -1,0 +1,62 @@
+{
+    "name": "textile-preview",
+    "displayName": "Textile Preview",
+    "description": "Displays a preview of textile markup content",
+    "version": "1.0.0",
+    "icon": "images/textile-preview.png",
+    "publisher": "michaelnewton",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/FrodgE/textile-preview.git"
+    },
+    "license": "MIT",
+    "keywords": [
+        "markdown",
+        "markup",
+        "viewer",
+        "render"
+    ],
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "categories": [
+        "Languages",
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:textile.showPreview",
+        "onCommand:textile.showPreviewToSide",
+        "onLanguage:textile"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "textile.showPreview",
+                "title": "Open preview",
+                "category": "Textile"
+            },
+            {
+                "command": "textile.showPreviewToSide",
+                "title": "Open preview to the side",
+                "category": "Textile"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    },
+    "dependencies": {
+        "textile-js": "^2.0.4"
+    }
+}

@@ -1,0 +1,51 @@
+h1. Header 1
+
+h2. Header 2
+
+h3. Header 3
+
+h4. Header 4
+
+h5. Header 5
+
+_italics_, *bold*, +underscore+, -strikethrough-, ^superscript^, ~subscript~, <code>code()</code>
+trademark(TM), reserved(R), copyright(C), ellipses ...
+%{color:red}red%, %{color:blue}blue%, %{color:green}green%
+
+!{width:250px}https://raw.githubusercontent.com/textile/textile-mark/master/png/logomark/textile-mark_logo.png(the alt text is "tee-dot")!
+
+Formatted text:
+
+<pre>
+// Show textile
+let previewDisposable = vscode.commands.registerCommand('textile.showPreview', () => {
+    let editor = vscode.window.activeTextEditor;
+
+    if (typeof editor === 'undefined') {
+        vscode.window.showErrorMessage('Please open a textile file');
+        return;
+    }
+</pre>
+
+|_.Col 1|_.Col 2|_.Col 3|
+|a|table|row|
+|a|table|row|
+
+* Bullet list
+* Another one
+* Another one
+
+# A numbered list
+# Which is numbered
+# With periods and a space
+
+A mixed list: 
+
+* Bullet one
+* Bullet two
+## Step 1
+## Step 2
+## Step 3
+* Bullet three
+** Sub Bullet 1
+** Sub Bullet 2
