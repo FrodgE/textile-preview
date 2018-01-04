@@ -3,6 +3,8 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
+import { imagePath } from './imagePath';
+
 const textile = require('textile-js');
 
 export function packTextileUri(uri: vscode.Uri) {
@@ -36,7 +38,8 @@ export class textileContentProvider implements vscode.TextDocumentContentProvide
 
 	public async provideTextDocumentContent(uri: vscode.Uri): Promise<string> {
 		let document = await vscode.workspace.openTextDocument( unpackTextileUri(uri) );
-		let body = await textile( document.getText() );
+		let text = imagePath( document.getText(), unpackTextileUri(uri) );
+		let body = await textile( text );
 		
 		return `<!DOCTYPE html>
 			<html>

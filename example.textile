@@ -12,7 +12,7 @@ _italics_, *bold*, +underscore+, -strikethrough-, ^superscript^, ~subscript~, <c
 trademark(TM), reserved(R), copyright(C), ellipses ...
 %{color:red}red%, %{color:blue}blue%, %{color:green}green%
 
-!{width:250px}https://raw.githubusercontent.com/textile/textile-mark/master/png/logomark/textile-mark_logo.png(the alt text is "tee-dot")!
+!{width:250px}images/textile-mark_logo.png(the alt text is "tee-dot")!
 
 Formatted text:
 

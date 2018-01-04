@@ -2,7 +2,7 @@
     "name": "textile-preview",
     "displayName": "Textile Preview",
     "description": "Displays a preview of textile markup content",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "images/textile-preview.png",
     "publisher": "michaelnewton",
     "repository": {

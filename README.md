@@ -10,6 +10,7 @@ This extension is a wrapper for the Node.js package [textile-js](https://www.npm
 
 * Displays textile preview
 * Preview is updated automatically
+* Supports relative image paths
 
 ## Available Commands
 
