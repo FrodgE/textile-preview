@@ -4,7 +4,7 @@ All notable changes to the "textile-preview" extension will be documented in thi
 
 ## [Unreleased]
 
-- N/A
+- Update VS code environment and dependencies
 
 ## [1.0.0] - 2018-01-03
 
