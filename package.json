@@ -2,7 +2,7 @@
     "name": "textile-preview",
     "displayName": "Textile Preview",
     "description": "Displays a preview of textile markup content",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "icon": "images/textile-preview.png",
     "publisher": "michaelnewton",
     "repository": {
@@ -17,7 +17,7 @@
         "render"
     ],
     "engines": {
-        "vscode": "^1.19.0"
+        "vscode": "^1.33.0"
     },
     "categories": [
         "Languages",
@@ -51,10 +51,10 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "@types/mocha": "^2.2.48",
+        "@types/node": "^7.10.6",
+        "typescript": "^2.9.2",
+        "vscode": "^1.1.34"
     },
     "dependencies": {
         "textile-js": "^2.0.4"

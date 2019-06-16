@@ -15,7 +15,7 @@ export function packTextileUri(uri: vscode.Uri) {
 		return uri;
 	}
 
-	return textileContentProvider.textileURI.with( {query : uri.toString()} );
+	return uri.with({ scheme: textileContentProvider.textileURI.scheme, query: uri.toString()} );
 }
 
 export function unpackTextileUri(uri: vscode.Uri) {

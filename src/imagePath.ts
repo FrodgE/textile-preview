@@ -21,16 +21,20 @@ export function imagePath(sourceText: string, sourceUri: vscode.Uri) {
         if (match) {
             let uri = vscode.Uri.parse(match[2]);
 
-            if (!uri.scheme && uri.path && !uri.fragment) {
-                // Assume it must be a file
-                if (uri.path[0] === '/') {
-                     let root = vscode.workspace.getWorkspaceFolder(sourceUri);
-                    if (root) {
-                        uri = vscode.Uri.file(path.join(root.uri.fsPath, uri.path));
-                    } 
+            if ((uri.scheme ==='file') && !uri.authority && uri.path) {
+                // Assume image is stored locally
+                // Check for open workspace/folder
+                let workspace = vscode.workspace.getWorkspaceFolder(sourceUri);
+                if (workspace && (match[2][0] === '/')) {
+                    // Image path relative to current workspace/project
+                    uri = vscode.Uri.file(path.join(workspace.uri.fsPath, uri.path));
                 } else {
+                    // Image path relative to textile file
                     uri = vscode.Uri.file(path.join(path.dirname(sourceUri.path), uri.path));
                 }
+
+                // Allow Webview API to load the local image
+                uri = uri.with({ scheme: 'vscode-resource' });
             }
 
             result += sourceText.substring(0, match.index + 1);
