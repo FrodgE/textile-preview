@@ -30,8 +30,7 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [
-            {
+        "commands": [{
                 "command": "textile.showPreview",
                 "title": "Open preview",
                 "category": "Textile"
@@ -41,7 +40,13 @@
                 "title": "Open preview to the side",
                 "category": "Textile"
             }
-        ]
+        ],
+        "keybindings": [{
+            "command": "textile.showPreviewToSide",
+            "key": "ctrl + k v",
+            "mac": "cmd + k v",
+            "when": "editorTextFocus"
+        }]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
